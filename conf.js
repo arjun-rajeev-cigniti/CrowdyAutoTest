@@ -5,8 +5,8 @@ exports.config = {
      * Sauce Execution Set up for mobile automation (android).
      * Since sauce does not support execution on Chrome the default browser is being used.
      */
-    sauceUser: 'arjun_rajeev',
-    sauceKey: '226441b2-737e-4be7-bf05-dc67cffae230',
+    sauceUser: process.env.SAUCE_USER,
+    sauceKey: process.env.SAUCE_KEY,
     //capabilities: {
     //    build: "1",
     //    browserName: 'Browser',
