@@ -1,0 +1,17 @@
+{
+  "name": "CrowdyAutoTest",
+  "version": "1.0.0",
+  "description": "Crowdy Automation Demo on Mobile and Web Browsers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/appium/sample-code.git"
+  },
+  "author": "arjun.rajeev",
+  "dependencies": {
+    "protractor": "^0.20.1"
+  }
+}
