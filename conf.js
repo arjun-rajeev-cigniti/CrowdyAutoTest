@@ -55,6 +55,13 @@ exports.config = {
             savePath: 'jUnitReports',
             filePrefix: 'Suite Results'
         }));
+        var Jasmine2HtmlReporter = require('protractor-jasmine2-html-reporter');
+        jasmine.getEnv().addReporter(new Jasmine2HtmlReporter({
+            savePath: 'jUnitReports/',
+            screenshotsFolder: 'images',
+            takeScreenshots: true,
+            takeScreenshotsOnlyOnFailures: true
+        }));
     }
 };
 
