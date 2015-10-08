@@ -12,7 +12,8 @@
   },
   "author": "arjun.rajeev",
   "dependencies": {
+    "jasmine-reporters": "^2.0.7",
     "protractor": "^0.20.1",
-    "protractor-jasmine2-html-reporter":"0.1.7"
+    "protractor-jasmine2-html-reporter": "0.1.7"
   }
 }
