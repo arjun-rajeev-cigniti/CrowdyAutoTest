@@ -16,14 +16,43 @@ exports.config = {
     //    deviceName: 'Google Nexus 7 HD Emulator',
     //    name: 'CrowdyNews Demo'
     //},
+
+    //capabilities: {
+    //        browserName: 'chrome',
+    //    chromeOptions: {
+    //        args: [
+    //            '--start-maximized'
+    //        ]
+    //    }
+    //    },
+
+
+    multiCapabilities: [{
+        'browserName': 'chrome'
+    }, {
+        'browserName': 'firefox'
+    }
+        //{
+        //    browserName: 'chrome',
+        //    'appium-version': '1.4',
+        //    platformName: 'Android',
+        //    platformVersion: '4.4',
+        //    deviceName: 'oneplus one',
+        //    name: 'CrowdyNews Demo',
+        //    seleniumAddress: 'http://localhost:4723/wd/hub'
+        //}
+    ],
+
     framework: 'jasmine2',
+    restartBrowserBetweenTests: true,
     onPrepare: function () {
         /**
          * Set up for non angular testing.
          */
-        browser.ignoreSynchronization = true;
-        global.driver = browser.driver;
-        driver.manage().timeouts().implicitlyWait(60000);
+
+        //browser.ignoreSynchronization = true;
+        //global.driver = browser.driver;
+        //driver.manage().timeouts().implicitlyWait(60000);
 
         /**
          * Abstraction for findElement.
@@ -44,6 +73,10 @@ exports.config = {
          */
         global.$locator = function (byCss) {
             return by.css(byCss);
+        };
+
+        global.$locatorxpath = function (byXpath) {
+            return by.xpath(byXpath);
         };
 
         /**
